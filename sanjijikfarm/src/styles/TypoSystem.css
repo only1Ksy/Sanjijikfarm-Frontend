@@ -1,0 +1,41 @@
+@theme {
+  --text-title-0: 2.125rem;
+  --text-headline-0-line-height: 150%;
+  --text-headline-0-letter-spacing: -0.02338rem;
+  --text-headline-0-font-weight: 800;
+
+  --text-title-1: 1.5rem;
+  --text-headline-1-line-height: 2.125rem;
+  --text-headline-1-letter-spacing: -0.0165rem;
+  --text-headline-1-font-weight: 700;
+
+  --text-title-2: 1.125rem;
+  --text-headline-2-line-height: 1.625rem;
+  --text-headline-2-letter-spacing: -0.01125rem;
+  --text-headline-2-font-weight: 700;
+
+  --text-title-3: 1rem;
+  --text-headline-3-line-height: 150%;
+  --text-headline-3-letter-spacing: -0.01rem;
+  --text-headline-3-font-weight: 700;
+
+  --text-heading-1: 1.25rem;
+  --text-heading-1-line-height: 170%;
+  --text-heading-1-letter-spacing: -0.01375rem;
+  --text-heading-1-font-weight: 700;
+
+  --text-body-1: 0.875rem;
+  --text-body-1-line-height: 1.375rem;
+  --text-body-1-letter-spacing: -0.000875rem;
+  --text-body-1-font-weight: 700;
+
+  --text-body-2: 0.75rem;
+  --text-body-2-line-height: 1.125rem;
+  --text-body-2-letter-spacing: -0.0075rem;
+  --text-body-2-font-weight: 600;
+
+  --text-body-2-med: 0.75rem;
+  --text-body-2-med-line-height: 1.125rem;
+  --text-body-2-med-letter-spacing: -0.0075rem;
+  --text-body-2-med-font-weight: 500;
+}
