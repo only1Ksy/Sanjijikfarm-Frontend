@@ -1,6 +1,6 @@
 @import 'tailwindcss';
 @import './ColorSystem.css';
-@import './Typography.css';
+@import './TypoSystem.css';
 
 @theme {
   --frame-width: 402px;
