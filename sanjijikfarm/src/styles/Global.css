@@ -5,3 +5,18 @@
 @theme {
   --frame-width: 402px;
 }
+
+@layer base {
+  html {
+    scrollbar-gutter: stable;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background-color: var(--color-white);
+    color: var(--color-black);
+    overflow-y: auto;
+    overscroll-behavior: none;
+  }
+}
