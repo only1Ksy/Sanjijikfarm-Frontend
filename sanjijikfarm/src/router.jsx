@@ -1,6 +1,6 @@
 import { createBrowserRouter } from 'react-router-dom';
 
-import App from './App';
+import PublicLayout from './components/common/layout/PublicLayout';
 import ProtectedRoute from './components/common/router/ProtectedRoute';
 import HomePage from './pages/HomePage';
 import LocalfoodPage from './pages/LocalfoodPage';
@@ -13,7 +13,7 @@ import SplashPage from './pages/SplashPage';
 export const router = createBrowserRouter([
   {
     path: '/',
-    element: <App />,
+    element: <PublicLayout />,
     children: [
       { index: true, element: <SplashPage /> },
       { path: 'login', element: <LoginPage /> },
