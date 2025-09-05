@@ -1,5 +1,6 @@
 import { createBrowserRouter } from 'react-router-dom';
 
+import ProtectedLayout from './components/common/layout/ProtectedLayout';
 import PublicLayout from './components/common/layout/PublicLayout';
 import ProtectedRoute from './components/common/router/ProtectedRoute';
 import HomePage from './pages/HomePage';
@@ -22,11 +23,16 @@ export const router = createBrowserRouter([
       {
         element: <ProtectedRoute />,
         children: [
-          { path: 'home', element: <HomePage /> },
-          { path: 'localfood', element: <LocalfoodPage /> },
-          { path: 'receipt', element: <ReceiptPage /> },
-          { path: 'report', element: <ReportPage /> },
-          { path: 'mypage', element: <MyPage /> },
+          {
+            element: <ProtectedLayout />,
+            children: [
+              { path: 'home', element: <HomePage /> },
+              { path: 'localfood', element: <LocalfoodPage /> },
+              { path: 'receipt', element: <ReceiptPage /> },
+              { path: 'report', element: <ReportPage /> },
+              { path: 'mypage', element: <MyPage /> },
+            ],
+          },
         ],
       },
     ],

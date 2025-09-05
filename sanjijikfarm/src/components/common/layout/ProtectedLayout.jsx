@@ -8,7 +8,9 @@ export default function ProtectedLayout() {
     <div className="h-screen w-full">
       <div className="relative mx-auto h-full max-w-[var(--frame-width)] shadow">
         <Header />
-        <Outlet />
+        <main className="h-full w-full pt-16 pb-16">
+          <Outlet />
+        </main>
         <NavBar />
       </div>
     </div>
