@@ -1,9 +1,9 @@
-function App() {
-  return (
-    <div className="h-screen w-full">
-      <div className="mx-auto h-full max-w-[var(--frame-width)] shadow">pages</div>
-    </div>
-  );
-}
+import { RouterProvider } from 'react-router-dom';
+
+import { router } from './router';
+
+const App = () => {
+  return <RouterProvider router={router} />;
+};
 
 export default App;
