@@ -9,6 +9,7 @@ import LoginPage from './pages/LoginPage';
 import MyPage from './pages/MyPage';
 import ReceiptPage from './pages/ReceiptPage';
 import ReportPage from './pages/ReportPage';
+import SignupPage from './pages/SignupPage';
 import SplashPage from './pages/SplashPage';
 
 export const router = createBrowserRouter([
@@ -18,6 +19,7 @@ export const router = createBrowserRouter([
     children: [
       { index: true, element: <SplashPage /> },
       { path: 'login', element: <LoginPage /> },
+      { path: 'signup', element: <SignupPage /> },
 
       // protected routes
       {
