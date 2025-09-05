@@ -6,7 +6,7 @@ import NavBar from './NavBar';
 export default function Layout() {
   return (
     <div className="h-screen w-full">
-      <div className="mx-auto h-full max-w-[var(--frame-width)] shadow">
+      <div className="relative mx-auto h-full max-w-[var(--frame-width)] shadow">
         <Header />
         <Outlet />
         <NavBar />
