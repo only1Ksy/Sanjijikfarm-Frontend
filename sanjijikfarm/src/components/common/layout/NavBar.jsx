@@ -17,7 +17,7 @@ export default function NavBar() {
           key={item.path}
           to={item.path}
           className={({ isActive }) =>
-            `text-body-2-med font-medium ${isActive ? 'text-green font-bold' : 'text-black'}`
+            `text-body-2-med font-medium ${isActive ? 'text-main-green font-bold' : 'text-black'}`
           }
         >
           {item.label}
