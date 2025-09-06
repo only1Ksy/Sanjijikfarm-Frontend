@@ -54,6 +54,9 @@ export default defineConfig([
 
       // React 17+ JSX transform
       'react/react-in-jsx-scope': 'off',
+
+      // PropTypes 강제 끄기
+      'react/prop-types': 'off',
     },
   },
 ]);
