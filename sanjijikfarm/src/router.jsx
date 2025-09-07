@@ -11,6 +11,7 @@ import ReceiptPage from './pages/ReceiptPage';
 import ReportPage from './pages/ReportPage';
 import SignupPage from './pages/SignupPage';
 import SplashPage from './pages/SplashPage';
+import MyPurchases from './pages/MyPurchases';
 
 export const router = createBrowserRouter([
   {
@@ -33,6 +34,7 @@ export const router = createBrowserRouter([
               { path: 'receipt', element: <ReceiptPage /> },
               { path: 'report', element: <ReportPage /> },
               { path: 'mypage', element: <MyPage /> },
+              { path: 'mypage/purchases', element: <MyPurchases />}
             ],
           },
         ],

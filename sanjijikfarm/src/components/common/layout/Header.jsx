@@ -6,7 +6,8 @@ const titles = {
   '/receipt': '영수증',
   '/localfood': '로컬푸드',
   '/report': '소비리포트',
-  '/mypage': '마이페이지',
+  '/mypage': '마이페이지', 
+  '/mypage/purchases': '나의 구매내역'
 };
 
 export default function Header() {
