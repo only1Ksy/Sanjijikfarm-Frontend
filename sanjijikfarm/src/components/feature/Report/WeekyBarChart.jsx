@@ -14,7 +14,7 @@ export default function WeeklyBarChart({ data }) {
         <YAxis hide />
         <Bar
           dataKey="value"
-          fill="#38B45C"
+          fill="#2F9C53"
           barSize={35}
         />
       </BarChart>
