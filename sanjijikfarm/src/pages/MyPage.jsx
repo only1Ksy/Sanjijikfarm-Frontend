@@ -1,4 +1,5 @@
 import { useNavigate } from 'react-router-dom';
+
 import ArrowIcon from '@/assets/icons/right-arrow.svg';
 
 export default function MyPage() {
@@ -14,31 +15,31 @@ export default function MyPage() {
   return (
     <div className="flex flex-col items-center px-5 pt-10">
       {/* 프로필 영역 */}
-      <div className="flex flex-col items-center w-full border-b border-gray-200 pb-10">
+      <div className="flex w-full flex-col items-center border-b border-gray-200 pb-10">
         {/* 프로필 이미지 (placeholder) */}
-        <div className="w-16 h-16 rounded-full bg-gray-300 mb-6" />
+        <div className="mb-6 h-16 w-16 rounded-full bg-gray-300" />
 
         {/* 사용자명 + 화살표 */}
         <button
           type="button"
           onClick={() => navigate('/mypage/profile')}
-          className="flex items-center text-title-2 font-semibold"
+          className="text-title-2 flex items-center font-semibold"
         >
           김회원
-          <ArrowIcon className="w-3 h-3 ml-5" alt="프로필 이동" />
+          <ArrowIcon className="ml-5 h-3 w-3" alt="프로필 이동" />
         </button>
       </div>
 
       {/* 메뉴 리스트 */}
-      <div className="w-full mt-12 space-y-7">
+      <div className="mt-12 w-full space-y-7">
         {menuList.map((menu, idx) => (
           <button
             key={idx}
             onClick={() => navigate(menu.path)}
-            className="flex w-full items-center justify-between text-title-2 font-bold"
+            className="text-title-2 flex w-full items-center justify-between font-bold"
           >
             {menu.label}
-            <ArrowIcon className="w-3 h-3" alt="프로필 이동" />
+            <ArrowIcon className="h-3 w-3" alt="프로필 이동" />
           </button>
         ))}
       </div>
