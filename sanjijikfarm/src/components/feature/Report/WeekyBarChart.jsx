@@ -1,4 +1,4 @@
-import { BarChart, Bar, XAxis, YAxis, ResponsiveContainer } from 'recharts';
+import { Bar, BarChart, ResponsiveContainer, XAxis, YAxis } from 'recharts';
 
 export default function WeeklyBarChart({ data }) {
   return (
@@ -8,15 +8,11 @@ export default function WeeklyBarChart({ data }) {
           dataKey="week"
           axisLine={false}
           tickLine={false}
-          tick={{ fontSize:18, fontWeight: 700,  fill: '#1E1E1E', }}
+          tick={{ fontSize: 18, fontWeight: 700, fill: '#1E1E1E' }}
           tickMargin={12}
         />
         <YAxis hide />
-        <Bar
-          dataKey="value"
-          fill="#2F9C53"
-          barSize={35}
-        />
+        <Bar dataKey="value" fill="#2F9C53" barSize={35} />
       </BarChart>
     </ResponsiveContainer>
   );

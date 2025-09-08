@@ -9,16 +9,16 @@ export default function PurchaseCard({
   onReceiptClick = () => {},
 }) {
   return (
-    <div className="flex w-[23rem] h-[4.9375rem] px-[0.625rem] py-[0.6875rem] rounded-md bg-white">
+    <div className="flex h-[4.9375rem] w-[23rem] rounded-md bg-white px-[0.625rem] py-[0.6875rem]">
       {/* 좌우 영역 구분 */}
-      <div className="flex flex-col justify-start w-full">
+      <div className="flex w-full flex-col justify-start">
         {/* 상단: storeName + 별점 / date */}
-        <div className="flex justify-between items-start">
-          <div className="flex items-center text-body-1 font-semibold">
+        <div className="flex items-start justify-between">
+          <div className="text-body-1 flex items-center font-semibold">
             <span>{storeName}</span>
             {hasRating && (
-              <span className="flex items-center text-main-brown text-body-2-med font-semibold ml-2">
-                <StarIcon className="w-3 h-3 mr-0.5" />
+              <span className="text-main-brown text-body-2-med ml-2 flex items-center font-semibold">
+                <StarIcon className="mr-0.5 h-3 w-3" />
                 {rating.toFixed(1)}
               </span>
             )}
@@ -27,12 +27,10 @@ export default function PurchaseCard({
         </div>
 
         {/* 하단: 금액 / 버튼 */}
-        <div className="flex justify-between items-end mt-[0.7rem]">
-          <div className="text-body-1 text-gray-7 mb-1">
-            {amount.toLocaleString()}원
-          </div>
+        <div className="mt-[0.7rem] flex items-end justify-between">
+          <div className="text-body-1 text-gray-7 mb-1">{amount.toLocaleString()}원</div>
           <button
-            className="w-[4.35rem] h-[1.5rem] rounded-[0.1875rem] bg-main-green hover:bg-green-600 text-white text-body-2 font-bold"
+            className="bg-main-green text-body-2 h-[1.5rem] w-[4.35rem] rounded-[0.1875rem] font-bold text-white hover:bg-green-600"
             onClick={onReceiptClick}
           >
             영수증 보기

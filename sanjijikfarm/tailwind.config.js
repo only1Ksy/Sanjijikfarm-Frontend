@@ -6,6 +6,6 @@ export default {
         pretendard: ['Pretendard', 'sans-serif'],
       },
     },
-  }, 
+  },
   plugins: [],
-}
+};
