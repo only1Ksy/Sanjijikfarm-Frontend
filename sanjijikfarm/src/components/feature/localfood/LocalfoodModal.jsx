@@ -1,19 +1,26 @@
 import FilterIcon from '@/assets/icons/filter.svg';
+import BottomSheet from '@/components/common/util/BottomSheet';
 import LocalfoodContent from '@/components/feature/localfood/LocalfoodContent';
 
-export default function LocalfoodModal({ shopList, filter, toggleFilter }) {
+export default function LocalfoodModal({ open, onClose, shopList, filter, toggleFilter }) {
   return (
-    <div className="flex max-h-100 w-full flex-col overflow-scroll">
-      <button
-        className="text-gray-7 text-body-2-med flex cursor-pointer items-center gap-1 self-end px-3 font-medium"
-        onClick={toggleFilter}
-      >
-        <span>{filter}</span>
-        <FilterIcon />
-      </button>
-      {shopList.map((shop, index) => (
-        <LocalfoodContent key={`shop list ${index}`} shop={shop} />
-      ))}
-    </div>
+    <BottomSheet open={open} onClose={onClose} title="로컬푸드 판매처" snapPoints={[0.92, 0.6, 0]}>
+      <div className="relative flex w-full flex-col pb-22">
+        <div className="sticky top-[-8px] z-10 bg-white">
+          <div className="flex items-center justify-end">
+            <button
+              className="text-body-2-med text-gray-7 flex cursor-pointer items-center gap-1 rounded-md px-3 py-1 font-medium"
+              onClick={toggleFilter}
+            >
+              <span>{filter}</span>
+              <FilterIcon />
+            </button>
+          </div>
+        </div>
+        {shopList.map((shop, index) => (
+          <LocalfoodContent key={`shop list ${index}`} shop={shop} />
+        ))}
+      </div>
+    </BottomSheet>
   );
 }
