@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom';
 
-import LogoIcon from '@/assets/icons/Logo.svg';
+import LogoIcon from '@/assets/icons/logo.svg';
 
 export default function SplashPage() {
   return (

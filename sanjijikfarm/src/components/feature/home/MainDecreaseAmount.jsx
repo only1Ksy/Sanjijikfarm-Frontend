@@ -1,4 +1,4 @@
-import TreeIcon from '@/assets/icons/Tree.svg';
+import TreeIcon from '@/assets/icons/tree.svg';
 
 export default function MainDecreaseAmount({ amount }) {
   return (
