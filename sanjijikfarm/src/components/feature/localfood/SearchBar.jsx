@@ -2,7 +2,7 @@ import SearchIcon from '@/assets/icons/search.svg';
 
 export default function SearchBar({ keyword, handleChange, handleKeyDown, handleSearch }) {
   return (
-    <div className="w-full p-2.5">
+    <div className="absolute top-0 w-full p-2.5">
       <div className="text-body-1 bg-gray-1 flex h-13 w-full items-center rounded-md font-medium">
         <input
           value={keyword}

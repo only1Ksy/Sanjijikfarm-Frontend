@@ -109,7 +109,7 @@ export default function BottomSheet({
             <div className="mb-2 h-1.5 w-10 rounded-full bg-gray-300" />
             {title ? (
               <div className="flex w-full items-center justify-between pb-2">
-                <h2 className="text-base font-semibold">{title}</h2>
+                <h2 className="text-title-3 font-bold">{title}</h2>
                 <button
                   onClick={handleClose}
                   className="cursor-pointer rounded-md px-2 py-1 text-gray-500 hover:bg-gray-100"

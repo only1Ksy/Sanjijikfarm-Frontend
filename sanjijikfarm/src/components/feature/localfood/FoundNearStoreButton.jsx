@@ -2,7 +2,7 @@ import ShopIcon from '@/assets/icons/shop.svg';
 
 export default function FoundNearStoreButton({ onClick }) {
   return (
-    <div className="flex w-full justify-center">
+    <div className="absolute bottom-5 flex w-full justify-center">
       <button
         onClick={onClick}
         className="bg-gray-1 flex h-8.5 w-49 cursor-pointer items-center justify-center gap-2.5 rounded-2xl"
