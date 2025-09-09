@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useState } from 'react';
 import debounce from 'lodash/debounce';
 
+import Map from '@/components/common/util/Map';
 import FoundNearStoreButton from '@/components/feature/localfood/FoundNearStoreButton';
 import LocalfoodModal from '@/components/feature/localfood/LocalfoodModal';
 import SearchBar from '@/components/feature/localfood/SearchBar';
@@ -55,6 +56,12 @@ export default function LocalfoodPage() {
   // 필터 토글
   const toggleFilter = () => {
     setFilter((prev) => (prev === '거리순' ? '평점순' : '거리순'));
+  };
+
+  // 인근 매장 찾기 버튼 클릭
+  const handleFindNearbyStores = () => {
+    console.log('Finding nearby stores...');
+    // TODO: 인근 매장 찾기 API 호출
   };
 
   const TEMP_LOCALFOOD_SHOP_LIST = [
@@ -131,14 +138,15 @@ export default function LocalfoodPage() {
   ];
 
   return (
-    <div>
+    <div className="relative h-full w-full">
+      <Map />
       <SearchBar
         keyword={inputValue}
         handleChange={handleChange}
         handleKeyDown={handleKeyDown}
         handleSearch={handleSearch}
       />
-      <FoundNearStoreButton onClick={() => setOpenSheet(true)} />
+      <FoundNearStoreButton onClick={() => handleFindNearbyStores} />
       <LocalfoodModal
         open={openSheet}
         onClose={() => setOpenSheet(false)}
