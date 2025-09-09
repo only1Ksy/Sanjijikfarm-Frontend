@@ -8,6 +8,8 @@ import SearchBar from '@/components/feature/localfood/SearchBar';
 export default function LocalfoodPage() {
   const [filter, setFilter] = useState('거리순');
 
+  const [openSheet, setOpenSheet] = useState(false);
+
   // 입력창에 보여줄 바로 반응하는 상태
   const [inputValue, setInputValue] = useState('');
   // 디바운싱 적용할 검색 트리거 상태
@@ -24,6 +26,7 @@ export default function LocalfoodPage() {
     if (searchKeyword) {
       // TODO: API 호출 (filter마다 정렬 다르게)
       console.log('Searching for:', searchKeyword);
+      setOpenSheet(true); // 검색되면 시트 열기
     }
   }, [searchKeyword]);
 
@@ -38,6 +41,7 @@ export default function LocalfoodPage() {
     if (e.key === 'Enter') {
       debouncedSearch.cancel(); // 디바운싱 취소
       setSearchKeyword(inputValue); // 즉시 검색
+      setOpenSheet(true);
     }
   };
 
@@ -45,6 +49,7 @@ export default function LocalfoodPage() {
   const handleSearch = () => {
     debouncedSearch.cancel();
     setSearchKeyword(inputValue);
+    setOpenSheet(true);
   };
 
   // 필터 토글
@@ -133,8 +138,14 @@ export default function LocalfoodPage() {
         handleKeyDown={handleKeyDown}
         handleSearch={handleSearch}
       />
-      <FoundNearStoreButton />
-      <LocalfoodModal shopList={TEMP_LOCALFOOD_SHOP_LIST} filter={filter} toggleFilter={toggleFilter} />
+      <FoundNearStoreButton onClick={() => setOpenSheet(true)} />
+      <LocalfoodModal
+        open={openSheet}
+        onClose={() => setOpenSheet(false)}
+        shopList={TEMP_LOCALFOOD_SHOP_LIST}
+        filter={filter}
+        toggleFilter={toggleFilter}
+      />
     </div>
   );
 }
