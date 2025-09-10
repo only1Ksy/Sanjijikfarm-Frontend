@@ -26,6 +26,7 @@ export default function LocalfoodDetailPage() {
       hasNoReview: false,
       rating: 4.2,
       likeCount: 45,
+      isLiked: true,
       url: 'https://via.placeholder.com/150',
     },
     {
@@ -35,6 +36,7 @@ export default function LocalfoodDetailPage() {
       hasNoReview: false,
       rating: 4.0,
       likeCount: 30,
+      isLiked: false,
       url: 'https://via.placeholder.com/150',
     },
     {
@@ -44,6 +46,7 @@ export default function LocalfoodDetailPage() {
       hasNoReview: false,
       rating: 3.8,
       likeCount: 22,
+      isLiked: false,
       url: 'https://via.placeholder.com/150',
     },
     {
@@ -53,6 +56,7 @@ export default function LocalfoodDetailPage() {
       hasNoReview: false,
       rating: 4.5,
       likeCount: 60,
+      isLiked: true,
       url: 'https://via.placeholder.com/150',
     },
     {
@@ -62,6 +66,7 @@ export default function LocalfoodDetailPage() {
       hasNoReview: false,
       rating: 4.1,
       likeCount: 38,
+      isLiked: false,
       url: 'https://via.placeholder.com/150',
     },
   ];
