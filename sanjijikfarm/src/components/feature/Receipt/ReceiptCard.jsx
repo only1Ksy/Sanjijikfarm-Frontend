@@ -9,14 +9,12 @@ export default function ReceiptCard({ id, storeName, date, price, rating }) {
   };
 
   return (
-    <div className="mb-2 flex items-center justify-between bg-gray-100 p-4 rounded-md">
+    <div className="mb-2 flex items-center justify-between rounded-md bg-gray-100 p-4">
       <div className="flex flex-col">
         <div className="text-body-1 flex items-center gap-1 font-semibold">
           {storeName}
           {showRating && (
-            <span className="text-main-brown text-body-2-med ml-2 flex items-center font-semibold">
-              ★ {rating}
-            </span>
+            <span className="text-main-brown text-body-2-med ml-2 flex items-center font-semibold">★ {rating}</span>
           )}
         </div>
         <div className="text-body-1 text-gray-7 mb-1">{price.toLocaleString()}원</div>

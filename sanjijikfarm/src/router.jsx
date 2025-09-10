@@ -8,12 +8,12 @@ import LocalfoodPage from './pages/LocalfoodPage';
 import LoginPage from './pages/LoginPage';
 import MyPage from './pages/MyPage';
 import MyPurchases from './pages/MyPurchases';
+import ReceiptDetail from './pages/ReceiptDetail';
 import ReceiptPage from './pages/ReceiptPage';
 import ReceiptUploadPage from './pages/ReceiptUploadPage';
 import ReportPage from './pages/ReportPage';
 import SignupPage from './pages/SignupPage';
 import SplashPage from './pages/SplashPage';
-import ReceiptDetail from './pages/ReceiptDetail';
 
 export const router = createBrowserRouter([
   {
@@ -38,7 +38,7 @@ export const router = createBrowserRouter([
               { path: 'report', element: <ReportPage /> },
               { path: 'mypage', element: <MyPage /> },
               { path: 'mypage/purchases', element: <MyPurchases /> },
-              { path: 'receipt/:id', element: <ReceiptDetail/> }
+              { path: 'receipt/:id', element: <ReceiptDetail /> },
             ],
           },
         ],

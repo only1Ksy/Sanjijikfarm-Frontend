@@ -1,4 +1,4 @@
-import { useLocation, matchPath } from 'react-router-dom';
+import { matchPath, useLocation } from 'react-router-dom';
 
 const titles = {
   '/home': '홈',
@@ -15,12 +15,10 @@ export default function Header() {
   const location = useLocation();
 
   const matchedTitle =
-    Object.entries(titles).find(([path]) =>
-      matchPath({ path, end: true }, location.pathname)
-    )?.[1] || '';
+    Object.entries(titles).find(([path]) => matchPath({ path, end: true }, location.pathname))?.[1] || '';
 
   return (
-    <div className="absolute top-0 flex h-16 w-full items-center justify-center bg-white shadow-sm z-10">
+    <div className="absolute top-0 z-10 flex h-16 w-full items-center justify-center bg-white shadow-sm">
       <span className="text-heading-1 font-bold">{matchedTitle}</span>
     </div>
   );

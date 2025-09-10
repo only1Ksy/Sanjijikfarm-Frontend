@@ -16,11 +16,10 @@ export default function ReceiptMain() {
     { id: '2', storeName: '김포로컬푸드 공동판매장', price: 46300, date: '2025.07.31.', rating: 0 },
     { id: '3', storeName: '김포로컬푸드 공동판매장', price: 46300, date: '2025.07.31.', rating: 3.8 },
   ];
-  
 
   return (
     <div className="relative mx-auto w-full max-w-md px-4 py-8">
-     {dummyReceipts.map((r) => (
+      {dummyReceipts.map((r) => (
         <ReceiptCard key={r.id} {...r} />
       ))}
 
