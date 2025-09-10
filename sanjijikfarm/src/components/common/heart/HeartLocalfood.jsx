@@ -1,3 +1,5 @@
+import clsx from 'clsx';
+
 import CautionIcon from '@/assets/icons/caution.svg';
 import HeartIcon from '@/assets/icons/heart.svg';
 import StarIcon from '@/assets/icons/star.svg';
@@ -24,7 +26,12 @@ export default function HeartLocalfood({ localfood }) {
             <StarIcon />
             <span>{localfood.rating}</span>
           </div>
-          <button className="border-gray-7 text-gray-7 hover:bg-gray-1 flex cursor-pointer items-center gap-0.5 rounded-3xl border px-1">
+          <button
+            className={clsx(
+              'flex cursor-pointer items-center gap-0.5 rounded-3xl border px-1',
+              localfood.isLiked ? 'bg-main-green text-white' : 'border-gray-7 text-gray-7 hover:bg-gray-1',
+            )}
+          >
             {localfood.likeCount}
             <HeartIcon />
           </button>
