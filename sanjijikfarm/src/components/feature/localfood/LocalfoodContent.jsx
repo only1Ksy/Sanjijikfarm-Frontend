@@ -4,7 +4,7 @@ import StarIcon from '@/assets/icons/star.svg';
 
 export default function LocalfoodContent({ shop }) {
   return (
-    <NavLink to={'/localfood?id=' + shop.id}>
+    <NavLink to={'/localfood/' + shop.id}>
       <div className="border-gray-1 flex w-full cursor-pointer justify-between border-b bg-white p-3">
         {/* Left Section */}
         <div className="flex flex-col gap-2">
