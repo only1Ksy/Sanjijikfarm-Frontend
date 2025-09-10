@@ -1,18 +1,24 @@
 // src/components/common/layout/Header.jsx
 import { useLocation } from 'react-router-dom';
+import { useMatch } from 'react-router-dom';
 
 const titles = {
   '/home': '홈',
   '/receipt': '영수증',
   '/localfood': '로컬푸드',
   '/report': '소비리포트',
-  '/mypage': '마이페이지', 
-  '/mypage/purchases': '나의 구매내역'
+  '/mypage': '마이페이지',
+  '/mypage/purchases': '나의 구매내역',
 };
 
 export default function Header() {
   const location = useLocation();
-  const title = titles[location.pathname] || '';
+  const isLocalfoodDetail = useMatch('/localfood/:id');
+
+  let title = titles[location.pathname] || '';
+  if (isLocalfoodDetail) {
+    title = '로컬푸드';
+  }
 
   return (
     <div className="absolute top-0 flex h-16 w-full items-center justify-center bg-white shadow-sm">
