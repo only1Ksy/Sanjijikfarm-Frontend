@@ -13,6 +13,7 @@ import ReceiptUploadPage from './pages/ReceiptUploadPage';
 import ReportPage from './pages/ReportPage';
 import SignupPage from './pages/SignupPage';
 import SplashPage from './pages/SplashPage';
+import ReceiptDetail from './pages/ReceiptDetail';
 
 export const router = createBrowserRouter([
   {
@@ -37,6 +38,7 @@ export const router = createBrowserRouter([
               { path: 'report', element: <ReportPage /> },
               { path: 'mypage', element: <MyPage /> },
               { path: 'mypage/purchases', element: <MyPurchases /> },
+              { path: 'receipt/:id', element: <ReceiptDetail/> }
             ],
           },
         ],
