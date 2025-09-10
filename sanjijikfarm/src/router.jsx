@@ -4,14 +4,15 @@ import ProtectedLayout from './components/common/layout/ProtectedLayout';
 import PublicLayout from './components/common/layout/PublicLayout';
 import ProtectedRoute from './components/common/router/ProtectedRoute';
 import HomePage from './pages/HomePage';
+import LocalfoodDetailPage from './pages/LocalfoodDetailPage';
 import LocalfoodPage from './pages/LocalfoodPage';
 import LoginPage from './pages/LoginPage';
 import MyPage from './pages/MyPage';
+import MyPurchases from './pages/MyPurchases';
 import ReceiptPage from './pages/ReceiptPage';
 import ReportPage from './pages/ReportPage';
 import SignupPage from './pages/SignupPage';
 import SplashPage from './pages/SplashPage';
-import MyPurchases from './pages/MyPurchases';
 
 export const router = createBrowserRouter([
   {
@@ -31,10 +32,11 @@ export const router = createBrowserRouter([
             children: [
               { path: 'home', element: <HomePage /> },
               { path: 'localfood', element: <LocalfoodPage /> },
+              { path: 'localfood/:id', element: <LocalfoodDetailPage /> },
               { path: 'receipt', element: <ReceiptPage /> },
               { path: 'report', element: <ReportPage /> },
               { path: 'mypage', element: <MyPage /> },
-              { path: 'mypage/purchases', element: <MyPurchases />}
+              { path: 'mypage/purchases', element: <MyPurchases /> },
             ],
           },
         ],
