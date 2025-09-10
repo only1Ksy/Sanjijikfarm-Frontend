@@ -1,57 +1,33 @@
-import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
-export default function ReceiptPage() {
-  const [image, setImage] = useState(null);
+import ReceiptCard from '../components/feature/Receipt/ReceiptCard';
 
-  const handleFileChange = (e) => {
-    const file = e.target.files[0];
-    if (!file) return;
+export default function ReceiptMain() {
+  const navigate = useNavigate();
 
-    const reader = new FileReader();
-    reader.onloadend = () => {
-      setImage(reader.result);
-    };
-    reader.readAsDataURL(file);
-  };
-
-  const handleUpload = () => {
-    if (!image) {
-      alert('이미지를 먼저 선택해주세요!');
-      return;
-    }
-
-    // TODO: 업로드 API 연동
-    console.log('업로드 시작:', image);
-  };
+  const dummyReceipts = [
+    {
+      storeName: '김포로컬푸드 공동판매장',
+      price: 46300,
+      date: '2025.07.31.',
+      rating: 3.8,
+    },
+    { storeName: '김포로컬푸드 공동판매장', price: 46300, date: '2025.07.31.', rating: 3.8 },
+    { storeName: '김포로컬푸드 공동판매장', price: 46300, date: '2025.07.31.', rating: 3.8 },
+  ];
 
   return (
-    <div className="mx-auto w-full max-w-md px-4 py-8">
-      <h1 className="text-title-3 mb-5 text-center font-bold">영수증 업로드</h1>
+    <div className="relative mx-auto w-full max-w-md px-4 py-8">
+      {dummyReceipts.map((r, i) => (
+        <ReceiptCard key={i} {...r} />
+      ))}
 
-      {/* 이미지 업로드 박스 (작게!) */}
-      <div className="relative mx-auto mb-6 flex h-[400px] w-[230px] items-center justify-center overflow-hidden rounded-md border-2 border-dashed bg-gray-100">
-        {image ? (
-          <>
-            <img src={image} alt="영수증 미리보기" className="h-full w-full object-contain" />
-            <label className="text-body-2 absolute right-2 bottom-2 cursor-pointer rounded bg-white px-3 py-1 text-black transition hover:opacity-90">
-              변경
-              <input type="file" accept="image/*" onChange={handleFileChange} className="hidden" />
-            </label>
-          </>
-        ) : (
-          <label className="flex cursor-pointer flex-col items-center justify-center text-sm text-gray-400">
-            <span>사진 업로드</span>
-            <input type="file" accept="image/*" onChange={handleFileChange} className="hidden" />
-          </label>
-        )}
-      </div>
-
-      {/* 업로드 버튼 */}
+      {/* + 버튼 */}
       <button
-        onClick={handleUpload}
-        className="bg-main-green mx-auto block w-[80%] rounded-md py-2 text-white transition hover:bg-green-600"
+        onClick={() => navigate('/receipt/upload')}
+        className="bg-gray-1 text-gray-7 fixed right-45 bottom-20 z-50 flex h-14 w-14 items-center justify-center rounded-full text-3xl"
       >
-        업로드 하기
+        +
       </button>
     </div>
   );
