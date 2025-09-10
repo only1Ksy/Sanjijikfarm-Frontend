@@ -17,7 +17,8 @@
   body {
     background-color: var(--color-white);
     color: var(--color-black);
-    overflow-y: auto;
+    overflow: hidden;
+    height: 100vh;
     overscroll-behavior: none;
     font-family: 'Pretendard', sans-serif;
   }
