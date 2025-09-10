@@ -71,7 +71,13 @@ export default function LocalfoodDetailPage() {
     },
   ];
 
-  const TEMP_REVIEW_LIST = [];
+  const TEMP_REVIEW_LIST = [
+    { id: 1, name: '딸기', date: '2023-10-01', rating: 5, content: '맛있어요!' },
+    { id: 2, name: '바나나', date: '2023-10-02', rating: 4, content: '좋아요!' },
+    { id: 3, name: '키위', date: '2023-10-03', rating: 3, content: '그저 그래요.' },
+    { id: 4, name: '망고', date: '2023-10-04', rating: 5, content: '최고예요!' },
+    { id: 5, name: '파인애플', date: '2023-10-05', rating: 4, content: '괜찮아요.' },
+  ];
 
   return (
     <div className="flex h-full w-full flex-col">
