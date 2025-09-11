@@ -1,5 +1,6 @@
 import { useState } from 'react';
 
+import LocalfoodEmptyCard from '@/components/common/empty/LocalfoodEmptyCard';
 import HeartLocalfoodCard from '@/components/common/heart/HeartLocalfoodCard';
 import ReviewCard from '@/components/common/review/ReviewCard';
 import LocalfoodDetailToggle from '@/components/feature/localfood/localfood-detail/LocalfoodDetailToggle';
@@ -109,9 +110,17 @@ export default function LocalfoodDetailPage() {
       <UpperLocafoodInfo shop={TEMP_LOCALFOOD_DETAIL} />
       <LocalfoodDetailToggle onSelect={setActiveTab} active={activeTab} />
       <div className="scrollbar-hide flex flex-grow flex-col overflow-scroll">
-        {activeTab === 'menu'
-          ? TEMP_MENU_LIST.map((localfood) => <HeartLocalfoodCard key={localfood.id} localfood={localfood} />)
-          : TEMP_REVIEW_LIST.map((review) => <ReviewCard key={review.id} review={review} />)}
+        {activeTab === 'menu' ? (
+          TEMP_MENU_LIST.length > 0 ? (
+            TEMP_MENU_LIST.map((localfood) => <HeartLocalfoodCard key={localfood.id} localfood={localfood} />)
+          ) : (
+            <LocalfoodEmptyCard text="아직 등록된 메뉴가 없습니다." />
+          )
+        ) : TEMP_REVIEW_LIST.length > 0 ? (
+          TEMP_REVIEW_LIST.map((review) => <ReviewCard key={review.id} review={review} />)
+        ) : (
+          <LocalfoodEmptyCard text="아직 등록된 리뷰가 없습니다." />
+        )}
       </div>
     </div>
   );
