@@ -9,7 +9,9 @@ import LocalfoodPage from './pages/LocalfoodPage';
 import LoginPage from './pages/LoginPage';
 import MyPage from './pages/MyPage';
 import MyPurchases from './pages/MyPurchases';
+import ReceiptDetail from './pages/ReceiptDetail';
 import ReceiptPage from './pages/ReceiptPage';
+import ReceiptUploadPage from './pages/ReceiptUploadPage';
 import ReportPage from './pages/ReportPage';
 import SignupPage from './pages/SignupPage';
 import SplashPage from './pages/SplashPage';
@@ -34,9 +36,11 @@ export const router = createBrowserRouter([
               { path: 'localfood', element: <LocalfoodPage /> },
               { path: 'localfood/:id', element: <LocalfoodDetailPage /> },
               { path: 'receipt', element: <ReceiptPage /> },
+              { path: 'receipt/upload', element: <ReceiptUploadPage /> },
               { path: 'report', element: <ReportPage /> },
               { path: 'mypage', element: <MyPage /> },
               { path: 'mypage/purchases', element: <MyPurchases /> },
+              { path: 'receipt/:id', element: <ReceiptDetail /> },
             ],
           },
         ],
