@@ -147,6 +147,9 @@ export default function LocalfoodPage() {
     },
   ];
 
+  // TODO: 검색 결과로 API에서 받아온 데이터로 교체
+  // (searchKeyword, filter 상태에 따라 API 호출)
+
   return (
     <div className="relative h-full w-full">
       <Map />

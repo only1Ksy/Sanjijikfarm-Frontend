@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
-import HeartLocalfood from '@/components/common/heart/HeartLocalfood';
-import Review from '@/components/common/review/Review';
+import HeartLocalfoodCard from '@/components/common/heart/HeartLocalfoodCard';
+import ReviewCard from '@/components/common/review/ReviewCard';
 import LocalfoodDetailToggle from '@/components/feature/localfood/localfood-detail/LocalfoodDetailToggle';
 import UpperLocafoodInfo from '@/components/feature/localfood/localfood-detail/UpperLocafoodInfo';
 
@@ -72,12 +72,37 @@ export default function LocalfoodDetailPage() {
   ];
 
   const TEMP_REVIEW_LIST = [
-    { id: 1, name: '딸기', date: '2023-10-01', rating: 5, content: '맛있어요!' },
-    { id: 2, name: '바나나', date: '2023-10-02', rating: 4, content: '좋아요!' },
-    { id: 3, name: '키위', date: '2023-10-03', rating: 3, content: '그저 그래요.' },
-    { id: 4, name: '망고', date: '2023-10-04', rating: 5, content: '최고예요!' },
-    { id: 5, name: '파인애플', date: '2023-10-05', rating: 4, content: '괜찮아요.' },
+    { id: 1, name: '딸기', date: '2023-10-01', rating: 5, content: '맛있어요!', reviewImages: [] },
+    {
+      id: 2,
+      name: '바나나',
+      date: '2023-10-02',
+      rating: 4,
+      content:
+        '좋아요! 다음에 또 구매할게요. 긴 리뷰 테스트 긴 리뷰 테스트 긴 리뷰 테스트 긴 리뷰 테스트 긴 리뷰 테스트 긴 리뷰 테스트 긴 리뷰 테스트 긴 리뷰 테스트 긴 리뷰 테스트 긴 리뷰 테스트 긴 리뷰 테스트 긴 리뷰 테스트 긴 리뷰 테스트 긴 리뷰 테스트 긴 리뷰 테스트 긴 리뷰 테스트 긴 리뷰 테스트 긴 리뷰 테스트 긴 리뷰 테스트 ',
+      reviewImages: ['https://via.placeholder.com/150', 'https://via.placeholder.com/150'],
+    },
+    {
+      id: 3,
+      name: '키위',
+      date: '2023-10-03',
+      rating: 3,
+      content: '그저 그래요.',
+      reviewImages: [
+        'https://via.placeholder.com/150',
+        'https://via.placeholder.com/150',
+        'https://via.placeholder.com/150',
+        'https://via.placeholder.com/150',
+        'https://via.placeholder.com/150',
+        'https://via.placeholder.com/150',
+      ],
+    },
+    { id: 4, name: '망고', date: '2023-10-04', rating: 5, content: '최고예요!', reviewImages: [] },
+    { id: 5, name: '파인애플', date: '2023-10-05', rating: 4, content: '괜찮아요.', reviewImages: [] },
   ];
+
+  // TODO: Fetch data from API and replace TEMP data
+  // (activeTab 상태에 따라 메뉴 or 리뷰 API 호출)
 
   return (
     <div className="flex h-full w-full flex-col">
@@ -85,8 +110,8 @@ export default function LocalfoodDetailPage() {
       <LocalfoodDetailToggle onSelect={setActiveTab} active={activeTab} />
       <div className="scrollbar-hide flex flex-grow flex-col overflow-scroll">
         {activeTab === 'menu'
-          ? TEMP_MENU_LIST.map((localfood) => <HeartLocalfood key={localfood.id} localfood={localfood} />)
-          : TEMP_REVIEW_LIST.map((review) => <Review key={review.id} review={review} />)}
+          ? TEMP_MENU_LIST.map((localfood) => <HeartLocalfoodCard key={localfood.id} localfood={localfood} />)
+          : TEMP_REVIEW_LIST.map((review) => <ReviewCard key={review.id} review={review} />)}
       </div>
     </div>
   );
