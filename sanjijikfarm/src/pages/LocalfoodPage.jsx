@@ -66,6 +66,7 @@ export default function LocalfoodPage() {
 
   const TEMP_LOCALFOOD_SHOP_LIST = [
     {
+      id: 1,
       name: '김포로컬푸트 공동판매장',
       rating: 3.8,
       reviewCount: 37,
@@ -73,6 +74,7 @@ export default function LocalfoodPage() {
       url: 'https://via.placeholder.com/',
     },
     {
+      id: 2,
       name: '김포로컬푸트 공동판매장',
       rating: 3.8,
       reviewCount: 37,
@@ -80,6 +82,7 @@ export default function LocalfoodPage() {
       url: 'https://via.placeholder.com/',
     },
     {
+      id: 3,
       name: '김포로컬푸트 공동판매장',
       rating: 3.8,
       reviewCount: 37,
@@ -87,6 +90,7 @@ export default function LocalfoodPage() {
       url: 'https://via.placeholder.com/',
     },
     {
+      id: 4,
       name: '김포로컬푸트 공동판매장',
       rating: 3.8,
       reviewCount: 37,
@@ -94,6 +98,7 @@ export default function LocalfoodPage() {
       url: 'https://via.placeholder.com/',
     },
     {
+      id: 5,
       name: '김포로컬푸트 공동판매장',
       rating: 3.8,
       reviewCount: 37,
@@ -101,6 +106,7 @@ export default function LocalfoodPage() {
       url: 'https://via.placeholder.com/',
     },
     {
+      id: 6,
       name: '김포로컬푸트 공동판매장',
       rating: 3.8,
       reviewCount: 37,
@@ -108,6 +114,7 @@ export default function LocalfoodPage() {
       url: 'https://via.placeholder.com/',
     },
     {
+      id: 7,
       name: '김포로컬푸트 공동판매장',
       rating: 3.8,
       reviewCount: 37,
@@ -115,6 +122,7 @@ export default function LocalfoodPage() {
       url: 'https://via.placeholder.com/',
     },
     {
+      id: 8,
       name: '김포로컬푸트 공동판매장',
       rating: 3.8,
       reviewCount: 37,
@@ -122,6 +130,7 @@ export default function LocalfoodPage() {
       url: 'https://via.placeholder.com/',
     },
     {
+      id: 9,
       name: '김포로컬푸트 공동판매장',
       rating: 3.8,
       reviewCount: 37,
@@ -129,6 +138,7 @@ export default function LocalfoodPage() {
       url: 'https://via.placeholder.com/',
     },
     {
+      id: 10,
       name: '김포로컬푸트 공동판매장',
       rating: 3.8,
       reviewCount: 37,
@@ -136,6 +146,9 @@ export default function LocalfoodPage() {
       url: 'https://via.placeholder.com/',
     },
   ];
+
+  // TODO: 검색 결과로 API에서 받아온 데이터로 교체
+  // (searchKeyword, filter 상태에 따라 API 호출)
 
   return (
     <div className="relative h-full w-full">
