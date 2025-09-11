@@ -1,7 +1,7 @@
 import ReviewStarIcon from '@/assets/icons/review-star.svg';
 import DateFormatter from '@/lib/utils/DateFormatter';
 
-export default function Review({ review }) {
+export default function ReviewCard({ review }) {
   return (
     <div className="border-gray-1 flex w-full flex-col gap-2 border-b p-4">
       <div className="flex flex-col gap-1">
