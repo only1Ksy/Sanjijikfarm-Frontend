@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 import LocalfoodEmptyCard from '@/components/common/empty/LocalfoodEmptyCard';
-import HeartLocalfoodCard from '@/components/common/like/LikeLocalfoodCard';
+import LikeLocalfoodCard from '@/components/common/like/LikeLocalfoodCard';
 import ReviewCard from '@/components/common/review/ReviewCard';
 import LocalfoodDetailToggle from '@/components/feature/localfood/localfood-detail/LocalfoodDetailToggle';
 import UpperLocafoodInfo from '@/components/feature/localfood/localfood-detail/UpperLocafoodInfo';
@@ -112,7 +112,7 @@ export default function LocalfoodDetailPage() {
       <div className="scrollbar-hide flex flex-grow flex-col overflow-scroll">
         {activeTab === 'menu' ? (
           TEMP_MENU_LIST.length > 0 ? (
-            TEMP_MENU_LIST.map((localfood) => <HeartLocalfoodCard key={localfood.id} localfood={localfood} />)
+            TEMP_MENU_LIST.map((localfood) => <LikeLocalfoodCard key={localfood.id} localfood={localfood} />)
           ) : (
             <LocalfoodEmptyCard text="아직 등록된 메뉴가 없습니다." />
           )
