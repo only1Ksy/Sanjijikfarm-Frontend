@@ -11,6 +11,7 @@ const titles = {
   '/mypage': '마이페이지',
   '/mypage/purchases': '나의 구매내역',
   '/mypage/reviews': '나의 리뷰',
+  '/mypage/likes': '찜한 로컬푸드',
 };
 
 export default function Header() {

@@ -4,7 +4,7 @@ import CautionIcon from '@/assets/icons/caution.svg';
 import HeartIcon from '@/assets/icons/heart.svg';
 import StarIcon from '@/assets/icons/star.svg';
 
-export default function HeartLocalfoodCard({ localfood }) {
+export default function LikeLocalfoodCard({ localfood }) {
   return (
     <div className="border-gray-2 flex w-full gap-4 border-b p-4">
       {/* left section */}

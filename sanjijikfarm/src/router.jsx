@@ -7,6 +7,7 @@ import HomePage from './pages/HomePage';
 import LocalfoodDetailPage from './pages/LocalfoodDetailPage';
 import LocalfoodPage from './pages/LocalfoodPage';
 import LoginPage from './pages/LoginPage';
+import MyHeartedPage from './pages/MyLikesPage';
 import MyPage from './pages/MyPage';
 import MyPurchases from './pages/MyPurchases';
 import MyReviews from './pages/MyReviews';
@@ -41,6 +42,7 @@ export const router = createBrowserRouter([
               { path: 'report', element: <ReportPage /> },
               { path: 'mypage', element: <MyPage /> },
               { path: 'mypage/purchases', element: <MyPurchases /> },
+              { path: 'mypage/likes', element: <MyHeartedPage /> },
               { path: 'receipt/:id', element: <ReceiptDetail /> },
               { path: 'mypage/reviews', element: <MyReviews /> },
             ],
