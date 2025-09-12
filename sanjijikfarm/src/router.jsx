@@ -7,7 +7,7 @@ import HomePage from './pages/HomePage';
 import LocalfoodDetailPage from './pages/LocalfoodDetailPage';
 import LocalfoodPage from './pages/LocalfoodPage';
 import LoginPage from './pages/LoginPage';
-import MyHeartedPage from './pages/MyLikedPage';
+import MyHeartedPage from './pages/MyLikesPage';
 import MyPage from './pages/MyPage';
 import MyPurchases from './pages/MyPurchases';
 import ReceiptDetail from './pages/ReceiptDetail';
