@@ -1,9 +1,25 @@
+import { useState } from 'react';
 import { useParams } from 'react-router-dom';
 
 import ItemCard from '../components/feature/Receipt/ItemCard';
+import ReviewModal from '../components/feature/Receipt/ReviewModal';
 
 export default function ReceiptDetail() {
   const { id } = useParams();
+  const [selectedItem, setSelectedItem] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isEditMode, setIsEditMode] = useState(false);
+
+  const handleOpenModal = (item) => {
+    setSelectedItem(item);
+    setIsEditMode(!!item.rating); // 별점 있으면 수정 모드
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setSelectedItem(null);
+    setIsModalOpen(false);
+  };
 
   const dummyReceipt = {
     id: id,
@@ -27,6 +43,7 @@ export default function ReceiptDetail() {
 
   return (
     <div className="h-screen overflow-hidden bg-white">
+      {isModalOpen && <ReviewModal item={selectedItem} onClose={handleCloseModal} isEditMode={isEditMode} />}
       <div className="scrollbar-hide max-h-[calc(100vh-120px)] overflow-y-auto px-4 py-3">
         <div className="mb-6 border-b border-gray-300 py-3 text-sm text-gray-800">
           <p className="text-body-2-med text-center text-gray-600">{dummyReceipt.date}</p>
@@ -60,7 +77,16 @@ export default function ReceiptDetail() {
 
         <div className="mb-8 space-y-3">
           {dummyReceipt.items.map((item, i) => (
-            <ItemCard key={i} {...item} />
+            <ItemCard
+              key={i}
+              {...item}
+              onClickReview={() =>
+                handleOpenModal({
+                  ...item,
+                  reviewText: item.rating ? '좋았어요! 신선하고 맛있었습니다.' : '',
+                })
+              }
+            />
           ))}
         </div>
 

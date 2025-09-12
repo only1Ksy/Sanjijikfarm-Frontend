@@ -1,4 +1,4 @@
-export default function ItemCard({ name, code, price, qty, total, rating }) {
+export default function ItemCard({ name, code, price, qty, total, rating, onClickReview }) {
   const hasRating = rating && rating > 0;
 
   return (
@@ -19,6 +19,15 @@ export default function ItemCard({ name, code, price, qty, total, rating }) {
         {hasRating ? <span className="text-main-brown text-body-2-med">★ {rating}</span> : <span />}
 
         <button
+          onClick={() =>
+            onClickReview({
+              name,
+              code,
+              rating,
+              reviewText: '맛있고 신선했어요!',
+              images: ['/example.jpg'],
+            })
+          }
           className={`text-body-2 rounded px-3 py-1 font-semibold ${
             hasRating ? 'bg-pale-green text-black' : 'bg-main-green text-white hover:bg-green-600'
           }`}
