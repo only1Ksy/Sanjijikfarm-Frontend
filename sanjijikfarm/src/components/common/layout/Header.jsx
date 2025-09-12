@@ -10,6 +10,7 @@ const titles = {
   '/report': '소비리포트',
   '/mypage': '마이페이지',
   '/mypage/purchases': '나의 구매내역',
+  '/mypage/reviews': '나의 리뷰',
 };
 
 export default function Header() {

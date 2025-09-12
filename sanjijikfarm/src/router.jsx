@@ -9,6 +9,7 @@ import LocalfoodPage from './pages/LocalfoodPage';
 import LoginPage from './pages/LoginPage';
 import MyPage from './pages/MyPage';
 import MyPurchases from './pages/MyPurchases';
+import MyReviews from './pages/MyReviews';
 import ReceiptDetail from './pages/ReceiptDetail';
 import ReceiptPage from './pages/ReceiptPage';
 import ReceiptUploadPage from './pages/ReceiptUploadPage';
@@ -41,6 +42,7 @@ export const router = createBrowserRouter([
               { path: 'mypage', element: <MyPage /> },
               { path: 'mypage/purchases', element: <MyPurchases /> },
               { path: 'receipt/:id', element: <ReceiptDetail /> },
+              { path: 'mypage/reviews', element: <MyReviews /> },
             ],
           },
         ],
