@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 import LocalfoodEmptyCard from '@/components/common/empty/LocalfoodEmptyCard';
-import HeartLocalfoodCard from '@/components/common/heart/HeartLocalfoodCard';
+import HeartLocalfoodCard from '@/components/common/like/LikeLocalfoodCard';
 import ReviewCard from '@/components/common/review/ReviewCard';
 import LocalfoodDetailToggle from '@/components/feature/localfood/localfood-detail/LocalfoodDetailToggle';
 import UpperLocafoodInfo from '@/components/feature/localfood/localfood-detail/UpperLocafoodInfo';
