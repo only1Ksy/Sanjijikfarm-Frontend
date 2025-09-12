@@ -10,6 +10,7 @@ const titles = {
   '/report': '소비리포트',
   '/mypage': '마이페이지',
   '/mypage/purchases': '나의 구매내역',
+  '/mypage/likes': '찜한 로컬푸드',
 };
 
 export default function Header() {
