@@ -1,5 +1,4 @@
 import { useNavigate } from 'react-router-dom';
-
 import ReceiptCard from '../components/feature/Receipt/ReceiptCard';
 
 export default function ReceiptMain() {
@@ -23,10 +22,9 @@ export default function ReceiptMain() {
         <ReceiptCard key={r.id} {...r} />
       ))}
 
-      {/* + 버튼 */}
       <button
         onClick={() => navigate('/receipt/upload')}
-        className="bg-gray-1 text-gray-7 fixed right-45 bottom-20 z-50 flex h-14 w-14 items-center justify-center rounded-full text-3xl"
+        className="absolute top-125 right-4 z-10 flex h-14 w-14 items-center justify-center rounded-full bg-gray-1 text-3xl text-gray-7"
       >
         +
       </button>
