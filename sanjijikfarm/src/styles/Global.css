@@ -7,7 +7,6 @@
 }
 
 @layer base {
-  
   html {
     scrollbar-gutter: stable;
     -webkit-font-smoothing: antialiased;
@@ -22,7 +21,6 @@
     overscroll-behavior: none;
     font-family: 'Pretendard', sans-serif;
   }
-
 }
 
 /* 스크롤바 숨기기용 클래스 */
@@ -32,5 +30,5 @@
 
 .scrollbar-hide {
   -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none;    /* Firefox */
+  scrollbar-width: none; /* Firefox */
 }

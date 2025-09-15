@@ -24,7 +24,7 @@ export default function ReceiptMain() {
 
       <button
         onClick={() => navigate('/receipt/upload')}
-        className="absolute top-125 right-4 z-10 flex h-14 w-14 items-center justify-center rounded-full bg-gray-1 text-3xl text-gray-7"
+        className="bg-gray-1 text-gray-7 absolute top-125 right-4 z-10 flex h-14 w-14 items-center justify-center rounded-full text-3xl"
       >
         +
       </button>
